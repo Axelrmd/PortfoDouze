@@ -1,0 +1,433 @@
+
+
+@mixin border-gradient($from, $to, $weight: 0) {
+    $mix-main: mix($from, $to);
+    $mix-sub-from: mix($mix-main, $from);
+    $mix-sub-to: mix($mix-main, $to);
+    
+    box-shadow: 0 1px 0 $weight rgba($mix-sub-to, .25),
+                0 -1px 0 $weight rgba($mix-sub-from, .25),
+                1px 0 0 $weight rgba($mix-sub-to, .25),
+                -1px 0 0 $weight  rgba($mix-sub-from, .25),
+                1px -1px 0 $weight rgba($mix-main, .5),
+                -1px 1px 0 $weight rgba($mix-main, .5),
+                1px 1px 0 $weight rgba($to, .75),
+                -1px -1px 0 $weight rgba($from, .75);
+}
+
+
+body{
+    margin: 0;
+    font-family: cacadia code;
+    overflow: hidden;
+
+    button{
+        font-family: cascadia code;
+    }
+
+    header{
+        background: #121212;
+        height: 7.4vh;
+        display: flex;
+
+        img{
+            height: 100%;
+        }
+
+        div{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        button{
+            background: #121212;
+            color: white;
+            border: 0;
+            font-size: 3.48vh;
+            border-left: 1px #413C3C solid;
+            border-right: 1px #413C3C solid;
+            height: 100%;
+            padding: 0 6.75vh 0 6.75vh;
+            transition: 500ms;
+            cursor: pointer;
+
+            &:hover{
+                background: rgba(255, 255, 255, 0.116);
+            }
+        }
+    }
+    .menu{
+        display: flex;
+        width: 100vw;
+
+        .aside{
+            background: #121212;
+            width: 3.49vw;
+            height: 92.6vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            button{
+                width: 100%;
+                height: 7.29vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                background: #121212;
+                border: 0;
+
+                &:hover{
+                    background: rgba(255, 255, 255, 0.116);
+
+                    path{
+                        fill: white;
+                    }
+                }
+            }
+
+            .svg-container{
+                height: 36px;
+                width: 36px;
+
+                path{
+                    fill: gray;
+                }
+            }
+        }
+
+        .contenuPrincipal{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .ongletsFichiers{
+                width: 100%;
+                height: 3.92vh;
+                background: #121212;
+                border: #413C3C solid 1px;
+                border-left: 0;
+                border-bottom: 0;
+                display: flex;
+
+                button{
+                    font-family: cascadia code;
+                    position: relative;
+                    display: inline-block;
+                    padding: 0;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    background: #121212;
+                    border: 0;
+                    border-left: 1px solid #242424;
+                    color: white;
+                    cursor: pointer;
+
+                    &:hover{
+                        background: #363636;
+                    }
+
+                    img{
+                        height: 80%;
+                        margin-left: 5px;
+                    }
+
+                    p{
+                        margin: 0 10px 0 10px;
+                    }
+
+                    button{
+                        border: 0;
+                        height: 70%;
+                        border-radius: 12px;
+                        background: none;
+                        position: relative;
+                        z-index: 12;
+
+                        &:hover{
+                            background: rgb(197, 44, 44);
+                        }
+
+                        .svg-container{
+
+                            path{
+                                fill: white;
+                            }
+                        }
+                    }
+                }
+
+                .selected{
+                    background: #242424;
+                    border-top: solid 1px #ff66c4; 
+                    cursor: auto;
+
+                    &:hover{
+                        background: #242424;
+                    }
+                }
+            }
+        }
+
+        .page{
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            .accueil{
+                width: 100%;
+                height: 100%;
+                background: #242424;
+    
+                #text {
+                    font-family: cascadia code;
+                    font-size: 6em;
+                    line-height: 1em;
+                    text-align: center;
+                    position: relative;
+                    top: 33%;
+                    transform: translateY(-50%);
+    
+                    &:hover {
+                      cursor: default;
+                    }
+                    
+                    .wrapper {
+                      display: inline-block;
+                      top: -900px;
+                      position: relative;
+                      height: 150px;
+                      width: 90px;
+                      transition: ease 0.3s all;
+                      
+                      span {
+                        position: absolute;
+                        top:0;
+                        right:0;
+                  
+                        transition: ease 0.3s all;
+    
+                        img{
+                            height: 8vh;
+                            margin-left: -12px;
+                            margin-right: -12px;
+                        }
+                        
+                        &.letter-2 {
+                          color: #ff66c4;
+                        }
+                  
+                        &.letter-1 {
+                          color: white;
+                          z-index: 1;
+                          
+                          &:hover {
+                             top: -3px;
+                             right: -3px;
+                             
+                             ~ .letter-2 {
+                               top: 3px;
+                               right: 3px;
+                             }
+                          }
+                        }
+                        
+                        &.space {
+                          padding: 0;
+                          min-width: 30px;
+                          display: inline-block;
+                        }
+                      }
+                    }
+                }//#text
+    
+                button{
+                    position: relative;
+                    top: 50%;
+                    left: 38%;
+                    width: 20%;
+                    height: 17%;
+                    background: #ff66c4;
+                    border: 0;
+                    cursor: pointer;
+                    font-size: 200%;
+                    color: white;
+                    //animation: rebondissement 1s infinite alternate;
+    
+                    svg{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        stroke-dasharray: 150 1100;
+                        stroke-dashoffset: 150;
+                        transition: 1s ease-in-out;
+                    }
+    
+                    &:hover{
+                        svg{
+                            stroke-dasharray: 1500 100;
+                        }
+                    }
+                }
+            
+                .actiff{
+                    animation: steve12 1s forwards;
+                }
+            }//.accueil
+
+            .skills{
+                width: 100%;
+                height: 100%;
+                background: #242424;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .requeteSql{
+                    font-size: 36px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 12px;
+                    margin-top: 80px;
+
+                    span{
+                        color: white;
+                    }
+
+                    .orange{
+                        color: #98610F;
+                    }
+
+                    select{
+                        border: 0;
+                        background: #242424;
+                        color: green;
+                        appearance: none;
+                        font-size: 36px;
+
+                        option{
+                            font-size: 12px;
+                            width: 5%;
+                        }
+                    }
+                }
+
+                .mesSkills{
+                    display: flex;
+                    width: 90%;
+                    margin-top: 5%;
+                    flex-wrap: wrap;
+                    max-height: 52%;
+                    
+                    .flipCarteSkill{
+                        margin: 1%;
+                        background: transparent;
+                        width: 200px;
+                        height: 200px;
+                        perspective: 1000px;
+    
+                        .int-flipCarteSkill{
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            text-align: center;
+                            transition: 0.8s;
+                            transform-style: preserve-3d;
+    
+                            .faceCarteSkill, .pileCarteSkill{
+                                position: absolute;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                width: 100%;
+                                height: 100%;
+                                backface-visibility: hidden;
+                                -webkit-backface-visibility: hidden;
+                                border: #ff66c4 solid 1px;
+                            }
+    
+                            .faceCarteSkill{
+                                background: #242424;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: space-around;
+
+                                img{
+                                    margin-top: 5%;
+                                    max-height: 65%;
+                                    max-width: 65%;
+                                }
+
+                                h3{
+                                    color: white;
+                                }
+                            }
+    
+                            .pileCarteSkill{
+                                background: #242424;
+                                transform: rotateY(180deg);
+                            }
+                        }
+    
+                        &:hover{
+    
+                            .int-flipCarteSkill{
+                                transform: rotateY(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pageProjets{
+                background: #242424;
+                height: 100%;
+                width: 100%;
+            }
+
+            .pageExps{
+                background: #242424;
+                height: 100%;
+                width: 100%;
+            }
+
+            .pageAbout{
+                background: #242424;
+                height: 100%;
+                width: 100%;
+            }
+        }//.page
+    }//menu
+}//body
+
+
+
+
+
+
+@keyframes steve12{
+    0%{
+        scale: 1;
+        rotate: 0deg;
+        translate: 0;
+    }
+    99%{
+        scale: 12;
+        rotate: 12000deg;
+        opacity: 0;
+        translate: 0;
+    }
+    100%{
+        translate: 10000px;
+
+    }
+}
