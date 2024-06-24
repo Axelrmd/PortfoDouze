@@ -4,6 +4,7 @@ import PageProjet from './PageProjets';
 import PageExps from './PageExps';
 import PageAbout from './PageAbout';
 import PageErreur from './PageErreur';
+import PageCompetencesIUT from './PageCpmpetencesIUT';
 
 const Page = ({ fichiers }) => {
   return (
@@ -21,6 +22,8 @@ const Page = ({ fichiers }) => {
               return <PageExps key={index} />;
             case "About.html":
               return <PageAbout key={index} />;
+            case "Competences_IUT.css":
+              return <PageCompetencesIUT key={index} />;
             default:
               return <PageErreur key={index} />;
           }

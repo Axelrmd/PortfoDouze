@@ -11,7 +11,7 @@ const header = [{
         nom: "Projects.html",
         selected: false,
         image: "./images/HTMLLogo.png"
-    }},{
+    }},/* {
     bouton: "EXPERIENCES",
     onglet: {
         nom: "Experiences.html",
@@ -23,8 +23,14 @@ const header = [{
         nom: "About.html",
         selected: false,
         image: "./images/HTMLLogo.png"
-    }
-}]
+    }}, */{
+    bouton: "Conpétences IUT",
+    onglet: {
+        nom: "Competences_IUT.css",
+        selected: false,
+        image: "./images/CSSLogo.png"
+    }}
+]
 
 
 const fichiers = [{nom: "Welcome", selected: true, image: "./images/LogoPortfolio.png"}]
@@ -105,7 +111,7 @@ const Skills = [
         type: ["Outil"]
     },{
         nom: "Suite JetBrains",
-        image: "./images/jetBrainsLogo.png",
+        image: "./images/JetBrainsLogo.png",
         type: ["Outil"]
     },{
         nom: "Android Studio",
@@ -115,4 +121,37 @@ const Skills = [
 ]
 
 
-export {header, fichiers, Skills};
+const Projects = [
+    {
+        nom: "Studio Kebab",
+        description: "Site de vente de kebab.",
+        image: "./images/studio_kebab.png", 
+        technologies: ["HTML", "CSS", "JavaScript"],
+        lien: "http://p2201074.pages.univ-lyon1.fr/studio-kebab/" 
+    },
+    {
+        nom: "Maki Malin",
+        description: "Site de liste de courses.",
+        image: "./images/maki-malin.png", 
+        technologies: ["HTML", "CSS", "PHP", "Symfony", "SQL", "Twig"],
+        lien: "https://github.com/Jemery-Dev/MakiMalin" 
+    },
+    {
+        nom: "Foirauxhistoires",
+        description: "Réseau social de partage de chapitres.",
+        image: "./images/foirauxhistoires.png", 
+        technologies: ["HTML", "CSS", "JavaScript", "Python"],
+        lien: "https://foireauxhistoires.super-sympa.fr/" 
+    },
+    {
+        nom: "Mon Portfolio",
+        description: "Portfolio personnel.",
+        image: "./images/portfolio.png", 
+        technologies: ["SCSS", "JavaScript", "React"],
+        lien: "https://axelrmd.github.io/PortfoDouze/" 
+    }
+];
+
+
+
+export {header, fichiers, Skills, Projects};

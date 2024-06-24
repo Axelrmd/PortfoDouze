@@ -38,7 +38,7 @@ const PageSkills = () => {
                                 <h3>{item.nom}</h3>
                             </div>
                             <div className="pileCarteSkill">
-                                zikette
+                                
                             </div>
                         </div>
                     </div>
