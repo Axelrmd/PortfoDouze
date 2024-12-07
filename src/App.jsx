@@ -1,13 +1,17 @@
-
-import { useState } from "react";
-import Header from "./Component/Header";
-import Menu from "./Component/Menu";
-import "./style/style.scss"
+import { useState } from 'react'
+import './style/style.scss';
+import Header from "./Component/anciens/Header";
+import Menu from "./Component/anciens/Menu";
 import { fichiers } from "./Data/Donnees";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Dev from './pages/Dev';
+import Chill from './pages/Chill';
 
-const App = () => {
 
-  const [infoGlobal, setInfoGlobal] = useState(fichiers);
+
+
+function App() {
+  /* const [infoGlobal, setInfoGlobal] = useState(fichiers);
 
   const ajoutFichier = (nvFichier) => {
     const fichierExist = infoGlobal.some(fichier => fichier.nom === nvFichier.nom);
@@ -53,16 +57,25 @@ const App = () => {
       const nouvelleListe = infoGlobal.filter((fichier) => fichier.nom !== asuppr);
       setInfoGlobal(nouvelleListe);
     }
-  };
-  
+  }; */
+
 
   return (
     <>
-      <Header fichiers={infoGlobal} ajoutFichier={ajoutFichier}/>
+      {/* <Header fichiers={infoGlobal} ajoutFichier={ajoutFichier}/>
       <Menu fichiers={infoGlobal} ajoutFichier={ajoutFichier} selectionFichier={changerDeSelectionner} supprFichier={supprFichierBar}/>
+       */}
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/chill" element={<Chill />} />
+          <Route path="/dev" element={<Dev/>}/>
+          <Route path="*" element={<div></div>} />
+        </Routes>
+      </BrowserRouter>
+
     </>
   );
 }
 
-
-export default App;
+export default App

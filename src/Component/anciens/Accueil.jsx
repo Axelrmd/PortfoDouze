@@ -14,7 +14,7 @@ const Accueil = ({fichiers}) => {
         if (letter === ' ') {
           layer += '<span class="space"></span>';
         }else if(letter === 'x'){
-          layer += `<span class="letter-${i}"><img src='./images/LogoPortfolio.png'/></span>`;
+          layer += `<span class="letter-${i}"><img src='assets/images/LogoPortfolio.png'/></span>`;
         } else {
           layer += `<span class="letter-${i}">${letter}</span>`;
         }

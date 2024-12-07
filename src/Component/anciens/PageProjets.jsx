@@ -1,4 +1,4 @@
-import { Projects } from "../Data/Donnees";
+import { Projects } from "../../Data/Donnees";
 
 const PageProjet = () => {
     return (

@@ -1,6 +1,6 @@
 // Header.js
 
-import {header} from '../Data/Donnees';
+import {header} from '../../Data/Donnees';
 
 const Header = ({fichiers, ajoutFichier}) => {
 
@@ -14,7 +14,7 @@ const Header = ({fichiers, ajoutFichier}) => {
   return (
     <>
       <header >
-        <img src="./images/LogoPortfolio.png" alt='Logo' />
+        <img src="assets/images/LogoPortfolio.png" alt='Logo' />
         <div >
         {header.map((item, index) => (
           <button key={index} onClick={() => ajouterFichier(item.onglet)}>

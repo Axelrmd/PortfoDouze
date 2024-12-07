@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Skills } from "../Data/Donnees"
+import { Skills } from "../../Data/Donnees"
 
 const PageSkills = () => {
 

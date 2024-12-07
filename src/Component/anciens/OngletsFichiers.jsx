@@ -1,9 +1,5 @@
 
 const OngletsFichiers = ({fichiers,ajoutFichier, selectionFichier, supprFichier}) => {
-
-  
-  
-
   return (
     <>
       <div className='ongletsFichiers'>
