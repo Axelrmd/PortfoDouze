@@ -1,8 +1,11 @@
 import { useState } from 'react'
-import './style/style.scss';
-import Header from "./Component/anciens/Header";
+/* import './style/style.scss'; */
+import './style/Header.css';
+import './style/MenuHamburger.css';
+import './style/ChangeLanguage.css';
+/* import Header from "./Component/anciens/Header";
 import Menu from "./Component/anciens/Menu";
-import { fichiers } from "./Data/Donnees";
+import { fichiers } from "./Data/Donnees"; */
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Dev from './pages/Dev';
 import Chill from './pages/Chill';

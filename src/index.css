@@ -1,1 +1,24 @@
-/* Gerer les themes */
+/* Mode sombre */
+body {
+    --primary-color: #ff69b4;
+    --secondary-color: #ffd700;
+    --accent-color: #00ffff;
+    --background-color: #121212; 
+    --text-color: #eeeeee; 
+    margin: 0;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+* {
+    transition: all 0.4s ease-in-out;
+}
+
+/* Mode clair */
+body.light {
+    --primary-color: #ff69b4; 
+    --secondary-color: #ffc107; 
+    --accent-color: #007bff; 
+    --background-color: #eeeeee;
+    --text-color: #121212; 
+}

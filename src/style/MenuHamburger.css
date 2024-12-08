@@ -1,0 +1,174 @@
+.menuHamburger {
+	height: 80px;
+	width: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	cursor: pointer;
+	transform: scale(0.5);
+}
+
+.barre1,
+.barre2,
+.barre3 {
+	height: 8px;
+	width: 100%;
+	background: white;
+	border-radius: 4px;
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.barre1 {
+	z-index: 4;
+}
+
+.barre2 {
+	z-index: 2;
+	margin: 15px 0;
+}
+
+.barre3 {
+	z-index: 6;
+}
+
+.actif .barre2 {
+	animation: barre 0.5s forwards;
+}
+
+.steve .barre2 {
+	animation: rev-barre 0.5s forwards;
+}
+
+.actif .barre1 {
+	animation: bare 0.5s forwards;
+}
+
+.steve .barre1 {
+	animation: rev-bare 0.5s forwards;
+}
+
+.actif .barre3 {
+	animation: barrre 0.5s forwards;
+}
+
+.steve .barre3 {
+	animation: rev-barrre 0.5s forwards;
+}
+
+
+@keyframes barre {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	50% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(0);
+		opacity: 0;
+	}
+}
+
+@keyframes rev-barre {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	50% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes bare {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+
+	50% {
+		transform: translateY(23px) rotate(0deg);
+	}
+
+	100% {
+		transform: translateY(23px) rotate(45deg);
+	}
+}
+
+@keyframes rev-bare {
+	0% {
+		transform: translateY(23px) rotate(45deg);
+	}
+
+	50% {
+		transform: translateY(23px) rotate(0deg);
+	}
+
+	100% {
+		transform: translateY(0px) rotate(0deg);
+	}
+}
+
+@keyframes barrre {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+
+	50% {
+		transform: translateY(-23px) rotate(0deg);
+	}
+
+	100% {
+		transform: translateY(-23px) rotate(135deg);
+	}
+}
+
+@keyframes rev-barrre {
+	0% {
+		transform: translateY(-23px) rotate(135deg);
+	}
+
+	50% {
+		transform: translateY(-23px) rotate(0deg);
+	}
+
+	100% {
+		transform: translateY(0px) rotate(0deg);
+	}
+}
+
+.menuHamburger div {
+	background-color: var(--text-color);
+	transition: all 0.3s ease-in-out;
+}
+
+/* Menu déroulant */
+.header-options-menu {
+	position: absolute;
+	background: var(--);
+	width: 12rem;
+	top: 70px;
+	right: 20px;
+	border-radius: 5px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	padding: 1rem;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.dropdown-menu{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
