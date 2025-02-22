@@ -20,7 +20,7 @@ const ChangeMode = () => {
         className={`mode-toggle ${currentMode}`}
         onClick={toggleMode}
       >
-        {currentMode === 'chill' ? '😌' + t('chill mode') : '🚀' + t('dev mode')}
+        {currentMode === 'chill' ? '😌 ' + t('chill mode') : '🚀 ' + t('dev mode')}
       </button>
     </div>
   );

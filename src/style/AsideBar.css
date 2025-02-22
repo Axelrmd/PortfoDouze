@@ -1,0 +1,34 @@
+.aside-bar{
+    background: var(--background-color);
+    height: 100%;
+    width: 4rem;
+    border-right: 2px solid var(--primary-color);
+}
+
+.aside-bar button{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: var(--background-color);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.aside-bar button:hover img{
+    filter: grayscale(0%) brightness(90%);
+    padding: 12%;
+}
+
+.aside-bar button img{
+    padding: 15%;
+    width: 90%;
+    filter: grayscale(100%) brightness(50%);
+    transition: filter 0s;
+    transition: padding 0.3s;
+}
+
+body.light .aside-bar button:hover img{
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(200deg);
+}
