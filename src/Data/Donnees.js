@@ -117,6 +117,42 @@ const Skills = [
         nom: "Android Studio",
         image: "./images/AndroidStudioLogo.png",
         type: ["Outil"]
+    },{
+        nom: "Angular",
+        image: "./images/AngularLogo.png",
+        type: ["Front-End", "Framework"]
+    },{
+        nom: "WinDev",
+        image: "./images/WindevLogo.png",
+        type: ["Front-End", "Back-End", "Outil", "Framework"]
+    },{
+        nom: "WebDev",
+        image: "./images/WebdevLogo.png",
+        type: ["Front-End", "Back-End", "Outil", "Framework"]
+    },{
+        nom: "XML",
+        image: "./images/XmlLogo.png",
+        type: ["Front-End"]
+    },{
+        nom: "Odoo",
+        image: "./images/OdooLogo.png",
+        type: ["Outil"]
+    },{
+        nom: "SQL Server Management Studio",
+        image: "./images/SSMSLogo.png",
+        type: ["Outil", "BD"]
+    },{
+        nom: "pgAdmin 4",
+        image: "./images/pgAdminLogo.png",
+        type: ["Outil"]
+    },{
+        nom: "Node",
+        image: "./images/NodeLogo.png",
+        type: ["Back-End", "Framework"]
+    },{
+        nom: "PostgreSQL",
+        image: "./images/PostgreLogo.png",
+        type: ["BD"]
     }
 ]
 
