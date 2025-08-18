@@ -1,3 +1,29 @@
+.complete-aside-bar{
+    height: 100%;
+    display: flex;
+}
+
+.complete-aside-bar .summary {
+    width: 15rem;
+    height: 100%;
+    background: var(--second-bg);
+    overflow: auto;
+    position: relative;
+    transition: all 0;
+    border-right: 2px solid var(--primary-color);
+}
+
+.complete-aside-bar .resizer {
+    width: 5px;
+    height: 100%;
+    cursor: ew-resize;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0;
+}
+
+
 .aside-bar{
     background: var(--background-color);
     height: 100%;

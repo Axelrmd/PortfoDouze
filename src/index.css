@@ -12,14 +12,6 @@ body {
     font-family: 'Open Sans';
 }
 
-#root{
-    height: 100vh;
-}
-
-* {
-    transition: all 0.4s ease-in-out;
-}
-
 /* Mode clair */
 body.light {
     --primary-color: #ff69b4;
@@ -28,6 +20,14 @@ body.light {
     --background-color: #eceff1;
     --second-bg: #e0f7fa;
     --text-color: #37474f;
+}
+
+#root{
+    height: 100vh;
+}
+
+* {
+    transition: all 0.4s ease-in-out;
 }
 
 
