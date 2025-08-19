@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/PortfoDouze/static/css/main.be41292e.css",
-    "main.js": "/PortfoDouze/static/js/main.3d97dd2d.js",
+    "main.js": "/PortfoDouze/static/js/main.bddc158b.js",
     "index.html": "/PortfoDouze/index.html",
     "main.be41292e.css.map": "/PortfoDouze/static/css/main.be41292e.css.map",
-    "main.3d97dd2d.js.map": "/PortfoDouze/static/js/main.3d97dd2d.js.map"
+    "main.bddc158b.js.map": "/PortfoDouze/static/js/main.bddc158b.js.map"
   },
   "entrypoints": [
     "static/css/main.be41292e.css",
-    "static/js/main.3d97dd2d.js"
+    "static/js/main.bddc158b.js"
   ]
 }
